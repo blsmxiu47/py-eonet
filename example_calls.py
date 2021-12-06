@@ -1,7 +1,7 @@
-import requests
+from eonet import EONET
 
-events_base = 'https://eonet.gsfc.nasa.gov/api/v3/events'
-response = requests.get(events_base, params={'category': 'severeStorms'})
-print('GET all severeStorms...')
-print(response)
-print(response.json())
+if __name__ == '__main__':
+    eonet = EONET()
+    response = eonet.get_events(categories=['severeStorms'])
+    print('GET all severeStorms...')
+    print(response.keys())
