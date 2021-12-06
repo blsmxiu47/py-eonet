@@ -1,3 +1,12 @@
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*$py.class
+
 .env
 
 eonet_env/
+
+vcr_cassettes/
+http_cache/
+test_downloads/
